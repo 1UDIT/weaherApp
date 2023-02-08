@@ -7,6 +7,7 @@ import { Temp } from "../Redux/TempReducer";
 
 const Home = () => {
     const [statename, setStateName] = useState('Delhi');
+    const [Name, setName] = useState('');
     const [weatherData, setWeatherdata] = useState();
     const apiKey = "f7a3cd954395f77b61cb5746170ead42";
     const [stateData, setStateData] = useState(
@@ -32,7 +33,8 @@ const Home = () => {
 
     const search = (e) => {
         e.preventDefault();
-        console.log(statename)
+        setStateName(Name);
+        dispatch(CityName(Name));
     }
     const selectCity = (city) => {
         console.log("City", city);
@@ -50,11 +52,8 @@ const Home = () => {
                 <div className="Content">
                     <div className="formDiv">
                         <form onSubmit={(e) => search(e)}>
-
                             <div className="inputSearch">
-
-                                <input type="search" className="inputType" onChange={(e) => setStateName(e.target.value)} />
-
+                                <input type="search" className="inputType" onChange={(e) => setName(e.target.value)} value = {Name}/>
                             </div>
                             <div className="SubmitDiv">
                                 <button type="submit" className="btnSubmit"><AiOutlineSearch style={{ color: "white", fontSize: "20px" }} /></button>

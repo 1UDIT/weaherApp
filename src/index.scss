@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.container {
+  /* background-color: aquamarine; */
+  /* display: flex;
+  justify-content: center; */
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  top: 0px;
+}
+
+.formContainer {
+  height: 100%;
+  background-image: linear-gradient(to bottom, hsl(0deg 0% 0%), hsl(0deg 0% 0% / 79%), hsl(0deg 93% 34%));
+  box-shadow: -3px -14px 20px 0px #464646;
+  position: absolute;
+  bottom: 0px;
+  top: 0px;
+  right: 00%;
+  left: 65%;
+  text-align: center;
+}
+
+.Content {
+  height: 100%;
+  margin-top: 0px;
+  position: absolute;
+  right: 0px;
+  left: 0px;
+  .formDiv {
+    width: 100%;
+    height: 25%;
+  }
+  .selectOption {
+    height: 30%;
+    width: 100%;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: left;
+  }
+  .optionCity {
+    padding: 5px;
+    margin-left: 50px;
+  }
+  .styleCity{
+    line-height: 2;
+  }
+  hr {
+    width: 80%;
+    height: 3px;
+    border: 0px;
+    border-top: 1px solid #ccc;
+  }
+}
+
+.inputSearch {
+  width: 70%;
+  float: left;
+}
+
+.inputType {
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: #ffffff 2px solid;
+  color: white;
+  width: 90%;
+  position: relative;
+  left: 10px;
+  top: 20px;
+}
+
+.SubmitDiv {
+  width: 30%;
+  float: left;
+}
+
+.btnSubmit {
+  border: none;
+  background-color: #d25544;
+  color: white;
+  height: 45px;
+  width: 90px;
+  right: 0px;
+  position: absolute;
+}
+
+.TempDiv {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  color: #000000;
+  font-size: 25px;
+  width: 60%;
+
+  .TempDisplay {
+    float: left;
+    width: 50%;
+  }
+  .cityNameDisplay {
+    float: left;
+    width: 50%;
+  }
+}

@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const DisplayTemp = {
-    active: "ss"
+    active: "TEmp"
 }
 
 const TempDisplay = createSlice({
@@ -10,6 +10,7 @@ const TempDisplay = createSlice({
     reducers: {
         Temp: (state = [], action) => {
             state.active = (Math.round(action.payload));
+            console.log(action.payload)
         },
     }
 });

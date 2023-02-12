@@ -18,23 +18,23 @@ const Home = () => {
         ]);
     const dispatch = useDispatch();
 
-    useEffect(() => {
-        const fetchData = async () => {
-            await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${statename}&units=metric&appid=${apiKey}`
-            ).then(response => {
-                setWeatherdata([response.data.main]);
-                console.log(response.data.main);
-            }).catch(e => {
-                console.log(e);
-            })
-        }
-        fetchData();
-    }, [statename])
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${statename}&units=metric&appid=${apiKey}`
+    //         ).then(response => {
+    //             setWeatherdata([response.data.main]);
+    //             console.log(response.data.main);
+    //         }).catch(e => {
+    //             console.log(e);
+    //         })
+    //     }
+    //     fetchData();
+    // }, [statename])
 
     const search = (e) => {
         e.preventDefault();
         setStateName(Name);
-        dispatch(CityName(Name));
+        dispatch(CityName(statename));
     }
     const selectCity = (city) => {
         console.log("City", city);

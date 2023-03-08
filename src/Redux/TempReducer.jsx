@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const DisplayTemp = {
-    active: "TEmp"
+    active: "TEMP"
 }
 
 const TempDisplay = createSlice({

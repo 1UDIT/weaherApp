@@ -8,7 +8,7 @@ const TempDisplay = () => {
 
     return (
         <div className="TempDiv">
-            <div className="TempDisplay">{Temp}</div>
+            <div className="TempDisplay">{Temp} &#8451;</div>
             <div className="cityNameDisplay">{user}</div>
 
         </div>

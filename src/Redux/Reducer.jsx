@@ -10,7 +10,7 @@ const switchSlice = createSlice({
     reducers: {
         CityName: (state = [], action) => {
             state.active = action.payload;
-            console.log(action.payload);
+            // console.log(action.payload);
         }
     }
 });

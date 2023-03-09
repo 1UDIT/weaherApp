@@ -10,7 +10,7 @@ const TempDisplay = createSlice({
     reducers: {
         Temp: (state = [], action) => {
             state.active = (Math.round(action.payload));
-            console.log(action.payload)
+            // console.log(action.payload)
         },
     }
 });

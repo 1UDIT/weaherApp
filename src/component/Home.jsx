@@ -12,9 +12,7 @@ const Home = () => {
     const [weatherData, setWeatherdata] = useState();
     const [humidity, setHumidity] = useState();
     const [Cloudy, setCloudy] = useState();
-    const [wind, setwind] = useState(); 
-
-    console.log(process.env.REACT_APP_API_KEY)
+    const [wind, setwind] = useState();  
 
     const [stateData, setStateData] = useState(
     );
@@ -27,8 +25,7 @@ const Home = () => {
                 setWeatherdata([response.data.main]);
                 setHumidity([response.data.main.humidity]);
                 setCloudy([...response.data.weather]);
-                setwind([response.data.wind]);
-                console.log(response.data);
+                setwind([response.data.wind]); 
             }).catch(e => {
                 console.log(e);
             })
@@ -64,13 +61,14 @@ const Home = () => {
         setStateName(city);
         dispatch(CityName(city));
     }
-
-
+ 
     return (
-        <div className="container" style={{
-            backgroundImage: `url(${process.env.PUBLIC_URL + "img/512.jpg"})`,
-            height: "100%",
-        }}>
+        <div className="container" 
+        // style={{
+        //     backgroundImage: `url("../src/img/512.jpg")`,
+        //     height: "100%",
+        // }}
+        >
             <TempDisplay />
             <div className="formContainer">
                 <div className="Content">
